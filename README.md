@@ -8,7 +8,7 @@ This project uses **YOLOv3** and **OpenCV** to detect motorcycles, helmets, and 
 - **CNN-based helmet classification**: Determines if a rider is wearing a helmet.
 - **Real-time video processing**: Analyzes frames from a video feed.
 - **Bounding boxes & labels**: Draws colored boxes around detected objects.
-- **CUDA support**: Uses GPU acceleration for improved performance.
+- **CUDA/MPS support**: Uses GPU acceleration for improved performance.
 
 ## Dependencies
 Ensure you have the following dependencies installed:
