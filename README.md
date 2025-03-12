@@ -1,69 +1,21 @@
-# Helmet and Number Plate Detection using YOLOv3 and OpenCV
+# Helmet_Detection
+This project offers a Python implementation for helmet detection using deep learning techniques, utilizing the power of sklearn, numpy, pandas, matplotlib, TensorFlow, Keras, PIL (Python Imaging Library), and OpenCV libraries. The project provides an efficient solution for detecting whether individuals in images or videos are wearing helmets, making it useful for safety monitoring applications in various domains, such as construction sites or sports events.
 
-## Overview
-This project uses **YOLOv3** and **OpenCV** to detect motorcycles, helmets, and number plates in real-time. It also utilizes a CNN model to classify whether a rider is wearing a helmet or not. The system processes a video file, identifies riders, checks for helmet usage, and highlights detected number plates.
+Key Features:
+- Deep Learning Architecture: The project implements a deep learning architecture, leveraging the TensorFlow and Keras libraries. The architecture is designed to perform object detection specifically for helmets, utilizing state-of-the-art convolutional neural networks (CNN).
+  
+- Dataset Preparation: The project includes utilities for preparing the dataset required for training the helmet detection model. It provides functionalities to collect and annotate helmet images, handle data augmentation techniques, and split the dataset into training and validation sets to ensure accurate and robust model training.
 
-## Features
-- **YOLOv3-based object detection**: Detects motorcycles and number plates.
-- **CNN-based helmet classification**: Determines if a rider is wearing a helmet.
-- **Real-time video processing**: Analyzes frames from a video feed.
-- **Bounding boxes & labels**: Draws colored boxes around detected objects.
-- **CUDA/MPS support**: Uses GPU acceleration for improved performance.
+- Model Training: The implementation facilitates the training of the deep learning model on the annotated helmet dataset. It enables users to configure the model architecture, fine-tune hyperparameters, and perform iterative training to improve the model's accuracy and generalization capabilities.
 
-## Dependencies
-Ensure you have the following dependencies installed:
-```bash
-pip install opencv-python numpy imutils tensorflow
-```
+- Model Evaluation and Metrics: The project incorporates evaluation metrics such as precision, recall and F1-score to assess the performance of the helmet detection model. These metrics provide insights into the model's ability to accurately detect helmets and its overall effectiveness.
 
-## Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-repo/helmet-detection.git
-   cd helmet-detection
-   ```
+- Inference on Images and Videos: The project provides functionalities to apply the trained helmet detection model to images or videos, enabling real-time or batch processing of visual data. This allows users to detect helmets and visualize the results, either by drawing bounding boxes around detected helmets or by generating heatmaps to highlight helmet presence.
 
-2. Download the necessary YOLOv3 model files:
-   - `yolov3-custom_7000.weights`
-   - `yolov3-custom.cfg`
+- Visualization and Reporting: The project utilizes matplotlib and OpenCV to generate informative visualizations and reports. These visualizations can include annotated images with detected helmets, precision-recall curves, or detection heatmaps, helping users to analyze and interpret the performance of the helmet detection model.
 
-3. Place your trained helmet classification model (`helmet-nonhelmet_cnn.h5`) in the project directory.
+- Customization and Integration: The modular structure of the code allows for easy customization and integration into existing applications or workflows. Users can extend the project to incorporate additional functionalities, adapt the model to specific helmet detection requirements, or integrate the helmet detection capability into real-time monitoring systems.
 
-4. Ensure you have a video file (`video.mp4`) to process.
+- Documentation and Examples: The project provides comprehensive documentation and examples to guide users through the installation, usage, and customization processes. It includes step-by-step instructions for training the helmet detection model, applying it to images or videos, and interpreting the detection results. Additionally, it provides examples of how to adapt the implementation to different datasets or scenarios.
 
-## Usage
-Run the following command to start detection:
-```bash
-python detect.py
-```
-
-## File Structure
-```
-helmet-detection/
-│-- yolov3-custom_7000.weights
-│-- yolov3-custom.cfg
-│-- helmet-nonhelmet_cnn.h5
-│-- video.mp4
-│-- detect.py
-│-- README.md
-```
-
-## Model Details
-- **YOLOv3**: Detects motorcycles and number plates.
-- **CNN Classifier**: Classifies cropped head regions as helmet or no-helmet.
-- **Thresholds**:
-  - Detection confidence > 0.3
-  - Non-Maximum Suppression (NMS) threshold = 0.4
-
-## Output
-- Saves processed video as `output.avi`.
-- Displays real-time detection results with bounding boxes.
-
-## Notes
-- Ensure that CUDA is enabled for GPU acceleration.
-- You can fine-tune YOLOv3 by training on a custom dataset.
-- Modify `detect.py` to adjust detection confidence thresholds.
-
-## License
-This project is licensed under the MIT License.
-
+By leveraging the capabilities of sklearn, numpy, pandas, matplotlib, TensorFlow, Keras, PIL, and OpenCV, this project empowers developers and researchers to implement helmet detection using deep learning techniques. With its efficient model training, evaluation, and inference capabilities, this project serves as a valuable resource for enhancing safety monitoring systems and improving compliance with helmet usage in various environments.
